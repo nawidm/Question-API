@@ -1,0 +1,93 @@
+[2018-07-25 15:31:58,403][INFO ][node                     ] [Mutant Master] version[2.4.0], pid[5696], build[ce9f0c7/2016-08-29T09:14:17Z]
+[2018-07-25 15:31:58,404][INFO ][node                     ] [Mutant Master] initializing ...
+[2018-07-25 15:31:58,963][INFO ][plugins                  ] [Mutant Master] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2018-07-25 15:31:58,987][INFO ][env                      ] [Mutant Master] using [1] data paths, mounts [[/ (/dev/sda1)]], net usable_space [74.5gb], net total_space [90.4gb], spins? [possibly], types [ext4]
+[2018-07-25 15:31:58,987][INFO ][env                      ] [Mutant Master] heap size [989.8mb], compressed ordinary object pointers [true]
+[2018-07-25 15:32:00,439][INFO ][node                     ] [Mutant Master] initialized
+[2018-07-25 15:32:00,439][INFO ][node                     ] [Mutant Master] starting ...
+[2018-07-25 15:32:00,508][INFO ][transport                ] [Mutant Master] publish_address {127.0.0.1:9300}, bound_addresses {[::1]:9300}, {127.0.0.1:9300}
+[2018-07-25 15:32:00,553][INFO ][discovery                ] [Mutant Master] question-cluster/VccxpVeKRY6P-iB5J7FvHg
+[2018-07-25 15:32:03,617][INFO ][cluster.service          ] [Mutant Master] new_master {Mutant Master}{VccxpVeKRY6P-iB5J7FvHg}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2018-07-25 15:32:03,712][INFO ][http                     ] [Mutant Master] publish_address {127.0.0.1:9200}, bound_addresses {[::1]:9200}, {127.0.0.1:9200}
+[2018-07-25 15:32:03,712][INFO ][node                     ] [Mutant Master] started
+[2018-07-25 15:32:03,722][INFO ][gateway                  ] [Mutant Master] recovered [0] indices into cluster_state
+[2018-07-25 15:36:07,174][INFO ][cluster.metadata         ] [Mutant Master] [questions] creating index, cause [auto(index api)], templates [], shards [5]/[1], mappings []
+[2018-07-25 15:36:07,458][INFO ][cluster.routing.allocation] [Mutant Master] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[questions][3], [questions][2], [questions][0], [questions][3], [questions][2], [questions][4], [questions][0]] ...]).
+[2018-07-25 15:36:07,564][DEBUG][action.index             ] [Mutant Master] failed to execute [index {[questions][difficulty][1], source[_na_]}] on [[questions][3]]
+MapperParsingException[failed to parse, document is empty]
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:153)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:309)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndex(IndexShard.java:580)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndexOnPrimary(IndexShard.java:559)
+	at org.elasticsearch.action.index.TransportIndexAction.prepareIndexOperationOnPrimary(TransportIndexAction.java:211)
+	at org.elasticsearch.action.index.TransportIndexAction.executeIndexRequestOnPrimary(TransportIndexAction.java:223)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:157)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:66)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase.doRun(TransportReplicationAction.java:648)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:279)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:271)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[2018-07-25 15:42:00,486][DEBUG][action.index             ] [Mutant Master] failed to execute [index {[questions][difficulty][1], source[_na_]}] on [[questions][3]]
+MapperParsingException[failed to parse, document is empty]
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:153)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:309)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndex(IndexShard.java:580)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndexOnPrimary(IndexShard.java:559)
+	at org.elasticsearch.action.index.TransportIndexAction.prepareIndexOperationOnPrimary(TransportIndexAction.java:211)
+	at org.elasticsearch.action.index.TransportIndexAction.executeIndexRequestOnPrimary(TransportIndexAction.java:223)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:157)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:66)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase.doRun(TransportReplicationAction.java:648)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:279)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:271)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[2018-07-25 15:42:04,294][DEBUG][action.index             ] [Mutant Master] failed to execute [index {[questions][difficulty][1], source[_na_]}] on [[questions][3]]
+MapperParsingException[failed to parse, document is empty]
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:153)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:309)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndex(IndexShard.java:580)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndexOnPrimary(IndexShard.java:559)
+	at org.elasticsearch.action.index.TransportIndexAction.prepareIndexOperationOnPrimary(TransportIndexAction.java:211)
+	at org.elasticsearch.action.index.TransportIndexAction.executeIndexRequestOnPrimary(TransportIndexAction.java:223)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:157)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:66)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase.doRun(TransportReplicationAction.java:648)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:279)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:271)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[2018-07-25 15:50:36,990][INFO ][node                     ] [Mutant Master] stopping ...
+[2018-07-25 15:50:37,183][INFO ][node                     ] [Mutant Master] stopped
+[2018-07-25 15:50:37,183][INFO ][node                     ] [Mutant Master] closing ...
+[2018-07-25 15:50:37,189][INFO ][node                     ] [Mutant Master] closed
+[2018-07-25 15:51:05,700][INFO ][node                     ] [Karla Sofen] version[2.4.0], pid[7268], build[ce9f0c7/2016-08-29T09:14:17Z]
+[2018-07-25 15:51:05,701][INFO ][node                     ] [Karla Sofen] initializing ...
+[2018-07-25 15:51:06,304][INFO ][plugins                  ] [Karla Sofen] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2018-07-25 15:51:06,322][INFO ][env                      ] [Karla Sofen] using [1] data paths, mounts [[/ (/dev/sda1)]], net usable_space [74.5gb], net total_space [90.4gb], spins? [possibly], types [ext4]
+[2018-07-25 15:51:06,322][INFO ][env                      ] [Karla Sofen] heap size [989.8mb], compressed ordinary object pointers [true]
+[2018-07-25 15:51:07,944][INFO ][node                     ] [Karla Sofen] initialized
+[2018-07-25 15:51:07,944][INFO ][node                     ] [Karla Sofen] starting ...
+[2018-07-25 15:51:08,049][INFO ][transport                ] [Karla Sofen] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}
+[2018-07-25 15:51:08,054][INFO ][discovery                ] [Karla Sofen] question-cluster/B2SKbqouT6OuDr54n1N_6g
+[2018-07-25 15:51:11,101][INFO ][cluster.service          ] [Karla Sofen] new_master {Karla Sofen}{B2SKbqouT6OuDr54n1N_6g}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2018-07-25 15:51:11,194][INFO ][http                     ] [Karla Sofen] publish_address {127.0.0.1:9200}, bound_addresses {[::1]:9200}, {127.0.0.1:9200}
+[2018-07-25 15:51:11,195][INFO ][node                     ] [Karla Sofen] started
+[2018-07-25 15:51:11,218][INFO ][gateway                  ] [Karla Sofen] recovered [1] indices into cluster_state
+[2018-07-25 15:51:11,575][INFO ][cluster.routing.allocation] [Karla Sofen] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[questions][3]] ...]).
